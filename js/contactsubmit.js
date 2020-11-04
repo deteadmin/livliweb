@@ -19,6 +19,10 @@
             // xhr.setRequestHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
             // xhr.setRequestHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
           },
+          headers: {
+            'Content-Type':'text/plain',
+          
+        },
                url: "https://xhjjrv6zl2.execute-api.us-east-1.amazonaws.com/prod/contact",
                type: "POST",
                crossDomain: true,
