@@ -15,7 +15,7 @@
     
                url: "https://xhjjrv6zl2.execute-api.us-east-1.amazonaws.com/prod/contact",
                type: "POST",
-               
+               crossDomain: true,
                data: JSON.stringify(msg),
                dataType: "json",
                success: function (response) {
