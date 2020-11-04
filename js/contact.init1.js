@@ -1,9 +1,4 @@
-/* Template Name: Delvy - Landing
-   Author: Themesbrand
-   Version: 1.0.0
-   Created: Sep 2020
-   File Description: Contact Form
-*/
+// ----- CONTACT ----- //
 $('#contact-form').submit(function(e) {
     e.preventDefault();
     
@@ -12,35 +7,31 @@ $('#contact-form').submit(function(e) {
         email: $('#email').val(),
          message: $('#comments').val(),
     };
-    alert(msg)
+    alert("SUBMIT1");
 
 $.ajax({
 
            url: "https://xhjjrv6zl2.execute-api.us-east-1.amazonaws.com/prod/contact",
            type: "POST",
            beforeSend: function( xhr ) {
-            xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-            xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+            //xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+            //xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+            
+            //xhr.setRequestHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+            //xhr.setRequestHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
           },
-           crossDomain: true,
+           //crossDomain: true,
            data: JSON.stringify(msg),
            dataType: "json",
            success: function (response) {
                var resp = JSON.parse(response)
-               document.getElementById('message').innerHTML = data;
-                $('#message').slideDown('slow');
-                $('#cform img.contact-loader').fadeOut('slow', function() {
-                    $(this).remove()
-                });
-                $('#submit').removeAttr('disabled');
-                if (data.match('success') != null) $('#cform').slideUp('slow');
+               alert('SUCCESS');
            },
            error: function (xhr, status) {
-               alert("errorSS");
+               alert("error");
            }
        });
   })
-
 // $('#contact-form').submit(function() {
 //     var action = $(this).attr('action');
 //     $("#message").slideUp(750, function() {
@@ -71,6 +62,3 @@ $.ajax({
 //     return false;
 
 // });
-
-
-
