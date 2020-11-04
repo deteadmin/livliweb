@@ -32,7 +32,7 @@
                    
                },
                error: function (xhr, status) {
-                   alert("ERROR");
+                  
                }
            });
         });
