@@ -14,7 +14,7 @@
              $.ajax({
        beforeSend: function( xhr ) {
         xhr.setRequestHeader('Content-Type', 'text/plain')
-            // xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+            xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
             
             // xhr.setRequestHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
             // xhr.setRequestHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
