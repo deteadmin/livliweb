@@ -25,9 +25,9 @@
         },
                url: "https://3j937buxz6.execute-api.us-east-1.amazonaws.com/adopter/contact",
                type: "POST",
-               crossDomain: true,
+               //crossDomain: true,
                data: JSON.stringify(msg),
-               dataType: "text",
+               dataType: "jsonp",
                success: function (response) {
               
                 //var resp = JSON.parse(response)
