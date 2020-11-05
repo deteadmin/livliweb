@@ -42,7 +42,12 @@
                    
                },
                error: function (xhr, status) {
-                  
+                document.getElementById('message').innerHTML = "Thanks for getting in touch. We will contact you within 24 hrs!. You can also reach us at(732) 554-1390 M-F 8-5 pm";
+                $('#message').slideDown('slow');
+                $('#cform img.contact-loader').fadeOut('slow', function() {
+                    $(this).remove()
+                });
+                $('#submit').removeAttr('disabled');
                }
            });
         });
