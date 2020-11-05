@@ -27,7 +27,7 @@
                type: "POST",
                //crossDomain: true,
                data: JSON.stringify(msg),
-               dataType: "jsonp",
+               dataType: "json",
                success: function (response) {
               
                 //var resp = JSON.parse(response)
